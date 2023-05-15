@@ -1,0 +1,76 @@
+[{
+  "name": "person 1",
+  "lat": "12.8436228",
+  "lng": "77.6629718",
+  "animal": "elephant"
+},{
+  "name": "person 2",
+  "lat": "12.295212520499947",
+  "lng": "76.71097916546769",
+  "animal": "elephant"
+},{
+  "name": "person 3",
+  "lat": "12.295212520499947",
+  "lng": "76.71097916546769",
+  "animal": "elephant"
+},{
+  "name": "person 3",
+  "lat": "12.843584",
+  "lng": "77.662967",
+  "animal": "elephant"
+},{
+  "name": "person 4",
+  "lat": "12.843584",
+  "lng": "77.662967",
+  "animal": "elephant"
+},{
+  "name": "person 5",
+  "lat": "12.843584",
+  "lng": "77.662967",
+  "animal": "elephant"
+},{
+  "name": "person 5",
+  "lat": "12.8436291",
+  "lng": "77.6629621",
+  "animal": "elephant"
+},{
+  "name": "person 6",
+  "lat": "12.8436291",
+  "lng": "77.6629621",
+  "animal": "elephant"
+},{
+  "name": "person 6",
+  "lat": "12.8436291",
+  "lng": "77.6629621",
+  "animal": "bear"
+},{
+  "name": "person 6",
+  "lat": "12.79874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 7",
+  "lat": "12.79874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 8",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 9",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 9",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 10",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "tiger"
+}]

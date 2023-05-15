@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Image Uploading</title>
+</head>
+
+<body>
+	<h1>Uploaded Images</h1>
+	<div>
+	<% items.forEach(function(image) { %>
+	<div>
+		<div>
+		<img width="100px" height="100px"
+			src="data:image/<%=image.img.contentType%>;base64,
+					<%=image.img.data.toString('base64')%>"
+		/>
+		<div>
+			<h5><%= image.name %></h5>
+
+			<p><%= image.desc %></p>
+		</div>
+		</div>
+	</div>
+	<% }) %>
+	</div>
+    <h1><a href="/show">Uploaded Images</a></h1>
+	<h1><a href="/form">Form page</a></h1>
+	<h1><a href="/groupshow">Group show</a></h1>
+	<h1><a href="/show">Uploaded Images</a></h1>
+</body>
+</html>
+
+<html>
+  <head>
+    <title>Geolocation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="index1.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeVRrGNNdgStU-d7vf3tuCh1abflLrOwc&callback=initMap"></script>
+  </body>
+</html>
+  

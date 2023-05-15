@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Bank</title>
+
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+   
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: white;
+  font-family: Arial;
+  color: black;
+}
+
+.right {
+  right: 0;
+  background-color:black;
+  font-family: Arial;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+  
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 main">z
+
+                <h2>WildLife Bank Core</h2>
+
+
+                <form action="/sign_up" method="POST">
+                    <input type="text" class="box" id="name" name="name" placeholder="Name" required />
+                    <br>
+                    <input type="text" class="box" id="latitude" name="latitude" placeholder="Latitude" required />
+                    <br>
+                    <input type="text" class="box" id="longitude" name="longitude" placeholder="Longitude" required />
+                    <br>
+
+                    <button class="geeks" onclick="getlocation()">
+                      Get Coordinates of location
+                    </button>
+                    <p id="demo1"></p>
+                    
+                    
+                    
+                    
+                    <script>
+                      var variable1 = document.getElementById("demo1");
+                      function getlocation() {
+                      navigator.geolocation.getCurrentPosition(showLoc);
+                      }
+                      function showLoc(pos) {
+                      
+                        document.getElementById("latitude").value =  pos.coords.latitude;
+                        document.getElementById("longitude").value =  pos.coords.longitude;
+                      }
+                    </script>
+                    <br>
+                    <input type="text" class="box" id="animal" name="animal" placeholder="Animal Name" required />
+                    <br>
+
+                    
+                    
+                  </div>
+
+                  <div>
+          <label for="image">Upload Image</label>
+          <input type="file" id="image" name="image" value="" required />
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+                  <div>
+                    <input type="submit" value="Submit" id="submit" />
+                    
+                </form>
+
+          
+
+
+            </div>
+        </div>
+    </div>
+
+
+<html>
+  <head>
+    <title>Geolocation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="index1.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeVRrGNNdgStU-d7vf3tuCh1abflLrOwc&callback=initMap"></script>
+  </body>
+</html>
+  
+</div>
+</div>

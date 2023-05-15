@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>WildLife Bank</title>
+</head>
+
+
+
+
+<style>.main {
+    padding: 20px;
+    font-family: 'Helvetica', serif;
+    box-shadow: 5px 5px 7px 5px #888888;
+}
+
+.main h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Helvetica', serif;
+}
+
+input {
+    font-family: 'Helvetica', serif;
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #767474;
+}
+
+input[type=submit] {
+    font-family: 'Helvetica', serif;
+    width: 100%;
+    background-color: #767474;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    border-radius: 10px;
+}
+
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+    height: 100%;
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    nav li {
+      float: left;
+    }
+    
+    nav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    nav li a:hover {
+      background-color: #111;
+    }
+
+  </style>
+
+<body>
+	<h1>WildLife Bank Core</h1>
+	<hr />
+
+  <nav>
+    <ul>
+      <li><a href="/groupshow">View Images</a></li>
+      <li><a href="http://127.0.0.1:3869/">Heatmap</a></li>
+    </ul>
+  </nav>
+  
+
+	<div>
+	<form action="/" method="POST" enctype="multipart/form-data">
+		
+	
+		<input
+			type="text"
+			id="name"
+			placeholder="Name"
+			value=""
+			name="name"
+			required
+		/>
+		<br>
+
+		<!--<label for="desc">Image Description</label>
+		<textarea
+			id="desc"
+			name="desc"
+			value=""
+			rows="2"
+			placeholder="Description"
+			required
+		>-->
+
+    <input type="text" placeholder="latitude" value=""
+	name="lat" id="lat" required/>
+	
+	
+
+    
+    <br>
+      
+	<input type="text" placeholder="longitude" value="" name="lng" id="lng" required/>
+
+    <br>
+
+    <button class="geeks" onclick="getlocation()">
+      Get Coordinates of location
+    </button>
+    <p id="demo1"></p>
+    
+    
+    
+    
+    <script>
+      var variable1 = document.getElementById("demo1");
+      function getlocation() {
+      navigator.geolocation.getCurrentPosition(showLoc);
+      }
+      function showLoc(pos) {
+      
+        document.getElementById("lat").value =  pos.coords.latitude;
+        document.getElementById("lng").value =  pos.coords.longitude;
+      }
+    </script>
+    <br>
+    
+    <input
+			type="text"
+			id="animal"
+			placeholder="animal"
+			value=""
+			name="animal"
+			required
+		/>
+
+    <br>
+
+
+		</textarea>
+		</div>
+		<div>
+		<label for="image">Upload Image</label>
+		<input type="file" id="image" name="image" value="" required />
+		</div>
+		<div>
+		<button type="submit">Submit</button>
+		</div>
+  </div>
+
+  
+
+    
+
+
+	</form>
+	
+
+  <script 
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeVRrGNNdgStU-d7vf3tuCh1abflLrOwc&callback=initMap">
+</script>
+
+<script>
+function initMap(){
+
+  const myLatlng = { lat: 12.363, lng: 88.044 };
+  var mapProp = {
+    center:myLatlng,
+    zoom:5,  
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+  let infoWindow = new google.maps.InfoWindow({
+    content: "Click the map to get Lat/Lng!",
+    position: myLatlng,
+  });
+
+  infoWindow.open(map);
+  // Configure the click listener.
+  map.addListener("click", (mapsMouseEvent) => {
+    // Close the current InfoWindow.
+    infoWindow.close();
+    // Create a new InfoWindow.
+
+  
+
+    infoWindow = new google.maps.InfoWindow({
+      position: mapsMouseEvent.latLng,
+    });
+	document.getElementById('lat').value = mapsMouseEvent.latLng.lat();
+	document.getElementById('lng').value = mapsMouseEvent.latLng.lng();
+    infoWindow.setContent(
+      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
+    );
+
+    infoWindow.open(map);
+    const lat = parseFloat(document.getElementById('lat').value);
+    const lng = parseFloat(document.getElementById('lng').value);
+  
+    // Create a new marker object using the lat and lng values
+    const marker = {
+      lat: lat,
+      lng: lng
+    };
+  
+    // Read the existing markers from the markers.json file
+    const markersData = fs.readFileSync('markers.json');
+    const markers = JSON.parse(markersData);
+  
+    // Add the new marker object to the array of markers
+    markers.push(marker);
+  
+    // Write the updated array of markers to the markers.json file
+    fs.writeFileSync('markers.json', JSON.stringify(markers));
+  
+    // Reload the page to display the new marker on the map
+    location.reload();
+  });
+
+  
+}
+window.initMap=initMap;
+
+
+
+
+
+
+google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+
+
+<body>
+<div id="googleMap" style="width:1500px;height:480px;"></div>
+</body>
+
+
+</body>
+</html>

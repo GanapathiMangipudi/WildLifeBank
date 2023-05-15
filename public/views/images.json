@@ -1,0 +1,136 @@
+[{
+  "name": "person 1",
+  "lat": "12.8436228",
+  "lng": "77.6629718",
+  "animal": "elephant"
+},{
+  "name": "person 2",
+  "lat": "12.295212520499947",
+  "lng": "76.71097916546769",
+  "animal": "elephant"
+},{
+  "name": "person 3",
+  "lat": "12.295212520499947",
+  "lng": "76.71097916546769",
+  "animal": "elephant"
+},{
+  "name": "person 3",
+  "lat": "12.843584",
+  "lng": "77.662967",
+  "animal": "elephant"
+},{
+  "name": "person 4",
+  "lat": "12.843584",
+  "lng": "77.662967",
+  "animal": "elephant"
+},{
+  "name": "person 5",
+  "lat": "12.843584",
+  "lng": "77.662967",
+  "animal": "elephant"
+},{
+  "name": "person 5",
+  "lat": "12.8436291",
+  "lng": "77.6629621",
+  "animal": "elephant"
+},{
+  "name": "person 6",
+  "lat": "12.8436291",
+  "lng": "77.6629621",
+  "animal": "elephant"
+},{
+  "name": "person 6",
+  "lat": "12.8436291",
+  "lng": "77.6629621",
+  "animal": "bear"
+},{
+  "name": "person 6",
+  "lat": "12.79874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 7",
+  "lat": "12.79874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 8",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 9",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 9",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "bear"
+},{
+  "name": "person 10",
+  "lat": "12.78874512159102",
+  "lng": "77.56826414853323",
+  "animal": "tiger"
+},{
+  "name": "PERSON 11",
+  "lat": "12.843552",
+  "lng": "77.6629635",
+  "animal": "LION"
+},{
+  "name": "PERSON 12",
+  "lat": "13.277832151606129",
+  "lng": "77.43999612727758",
+  "animal": "LION"
+},{
+  "name": "PERSON 12",
+  "lat": "13.277832151606129",
+  "lng": "77.43999612727758",
+  "animal": "LION"
+},{
+  "name": "PERSON 13",
+  "lat": "13.277832151606129",
+  "lng": "77.43999612727758",
+  "animal": "LION"
+},{
+  "name": "PERSON 13",
+  "lat": "13.277832151606129",
+  "lng": "77.43999612727758",
+  "animal": "LION"
+},{
+  "name": "PERSON 14",
+  "lat": "13.277832151606129",
+  "lng": "77.43999612727758",
+  "animal": "TIGER"
+},{
+  "name": "person 14",
+  "lat": "12.8463043",
+  "lng": "77.6650548",
+  "animal": "lion"
+},{
+  "name": "person 15",
+  "lat": "12.8563043",
+  "lng": "77.6650548",
+  "animal": "lion"
+},{
+  "name": "person 15",
+  "lat": "12.8663043",
+  "lng": "77.6750548",
+  "animal": "lion"
+},{
+  "name": "person 16",
+  "lat": "12.8663043",
+  "lng": "77.6750578",
+  "animal": "lion"
+},{
+  "name": "person 18",
+  "lat": "12.8663043",
+  "lng": "77.6750578",
+  "animal": "tiger"
+},{
+  "name": "person 19",
+  "lat": "12.8663043",
+  "lng": "77.6750578",
+  "animal": "tiger"
+}]
